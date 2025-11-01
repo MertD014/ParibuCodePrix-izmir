@@ -1,0 +1,58 @@
+{
+  "contractName": "GPT4Car",
+  "sourceFile": "gpt4Car.sol",
+  "abi": [
+    {
+      "type": "function",
+      "name": "takeYourTurn",
+      "inputs": [
+        {
+          "name": "codePrix",
+          "type": "address",
+          "internalType": "contract CodePrix"
+        },
+        {
+          "name": "allCars",
+          "type": "tuple[]",
+          "internalType": "struct CodePrix.CarData[]",
+          "components": [
+            {
+              "name": "balance",
+              "type": "uint32",
+              "internalType": "uint32"
+            },
+            {
+              "name": "speed",
+              "type": "uint32",
+              "internalType": "uint32"
+            },
+            {
+              "name": "y",
+              "type": "uint32",
+              "internalType": "uint32"
+            },
+            {
+              "name": "shield",
+              "type": "uint32",
+              "internalType": "uint32"
+            },
+            {
+              "name": "car",
+              "type": "address",
+              "internalType": "contract Car"
+            }
+          ]
+        },
+        {
+          "name": "ourCarIndex",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    }
+  ],
+  "bytecodeLength": 8884,
+  "extractedAt": "2025-10-30T14:27:17.018Z"
+}

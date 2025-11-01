@@ -1,0 +1,328 @@
+{
+  "contractName": "RunRace",
+  "sourceFile": "RunRace.s.sol",
+  "abi": [
+    {
+      "type": "function",
+      "name": "IS_SCRIPT",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool",
+          "internalType": "bool"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "appendToGamelogJson",
+      "inputs": [
+        {
+          "name": "data",
+          "type": "string",
+          "internalType": "string"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "getHistoricalAccelerateCost",
+      "inputs": [
+        {
+          "name": "amount",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "usedAbilities",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "currentTurn",
+          "type": "tuple",
+          "internalType": "struct GameTurn",
+          "components": [
+            {
+              "name": "cars",
+              "type": "address[5]",
+              "internalType": "address[5]"
+            },
+            {
+              "name": "balance",
+              "type": "uint256[5]",
+              "internalType": "uint256[5]"
+            },
+            {
+              "name": "totalExpenses",
+              "type": "uint256[3]",
+              "internalType": "uint256[3]"
+            },
+            {
+              "name": "speed",
+              "type": "uint256[5]",
+              "internalType": "uint256[5]"
+            },
+            {
+              "name": "y",
+              "type": "uint256[5]",
+              "internalType": "uint256[5]"
+            },
+            {
+              "name": "shield",
+              "type": "uint256[5]",
+              "internalType": "uint256[5]"
+            },
+            {
+              "name": "costs",
+              "type": "uint256[3]",
+              "internalType": "uint256[3]"
+            },
+            {
+              "name": "bought",
+              "type": "uint256[3]",
+              "internalType": "uint256[3]"
+            },
+            {
+              "name": "currentCar",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "usedAbilities",
+              "type": "uint256[3]",
+              "internalType": "uint256[3]"
+            }
+          ]
+        },
+        {
+          "name": "codePrix",
+          "type": "address",
+          "internalType": "contract CodePrix"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "sum",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getHistoricalShellCost",
+      "inputs": [
+        {
+          "name": "amount",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "usedAbilities",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "currentTurn",
+          "type": "tuple",
+          "internalType": "struct GameTurn",
+          "components": [
+            {
+              "name": "cars",
+              "type": "address[5]",
+              "internalType": "address[5]"
+            },
+            {
+              "name": "balance",
+              "type": "uint256[5]",
+              "internalType": "uint256[5]"
+            },
+            {
+              "name": "totalExpenses",
+              "type": "uint256[3]",
+              "internalType": "uint256[3]"
+            },
+            {
+              "name": "speed",
+              "type": "uint256[5]",
+              "internalType": "uint256[5]"
+            },
+            {
+              "name": "y",
+              "type": "uint256[5]",
+              "internalType": "uint256[5]"
+            },
+            {
+              "name": "shield",
+              "type": "uint256[5]",
+              "internalType": "uint256[5]"
+            },
+            {
+              "name": "costs",
+              "type": "uint256[3]",
+              "internalType": "uint256[3]"
+            },
+            {
+              "name": "bought",
+              "type": "uint256[3]",
+              "internalType": "uint256[3]"
+            },
+            {
+              "name": "currentCar",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "usedAbilities",
+              "type": "uint256[3]",
+              "internalType": "uint256[3]"
+            }
+          ]
+        },
+        {
+          "name": "codePrix",
+          "type": "address",
+          "internalType": "contract CodePrix"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "sum",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getHistoricalShieldCost",
+      "inputs": [
+        {
+          "name": "amount",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "usedAbilities",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "currentTurn",
+          "type": "tuple",
+          "internalType": "struct GameTurn",
+          "components": [
+            {
+              "name": "cars",
+              "type": "address[5]",
+              "internalType": "address[5]"
+            },
+            {
+              "name": "balance",
+              "type": "uint256[5]",
+              "internalType": "uint256[5]"
+            },
+            {
+              "name": "totalExpenses",
+              "type": "uint256[3]",
+              "internalType": "uint256[3]"
+            },
+            {
+              "name": "speed",
+              "type": "uint256[5]",
+              "internalType": "uint256[5]"
+            },
+            {
+              "name": "y",
+              "type": "uint256[5]",
+              "internalType": "uint256[5]"
+            },
+            {
+              "name": "shield",
+              "type": "uint256[5]",
+              "internalType": "uint256[5]"
+            },
+            {
+              "name": "costs",
+              "type": "uint256[3]",
+              "internalType": "uint256[3]"
+            },
+            {
+              "name": "bought",
+              "type": "uint256[3]",
+              "internalType": "uint256[3]"
+            },
+            {
+              "name": "currentCar",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "usedAbilities",
+              "type": "uint256[3]",
+              "internalType": "uint256[3]"
+            }
+          ]
+        },
+        {
+          "name": "codePrix",
+          "type": "address",
+          "internalType": "contract CodePrix"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "sum",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "run",
+      "inputs": [],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "setUp",
+      "inputs": [],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "error",
+      "name": "CodePrixTest__getAbilityCost_abilityNotFound",
+      "inputs": [
+        {
+          "name": "abilityIndex",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "CodePrixTest__getCarIndex_carNotFound",
+      "inputs": [
+        {
+          "name": "car",
+          "type": "address",
+          "internalType": "address"
+        }
+      ]
+    }
+  ],
+  "bytecodeLength": 82264,
+  "extractedAt": "2025-10-30T14:27:17.021Z"
+}

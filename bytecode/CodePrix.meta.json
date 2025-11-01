@@ -1,0 +1,569 @@
+{
+  "contractName": "CodePrix",
+  "sourceFile": "CodePrix.sol",
+  "abi": [
+    {
+      "type": "function",
+      "name": "buyAcceleration",
+      "inputs": [
+        {
+          "name": "amount",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "cost",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "buyShell",
+      "inputs": [
+        {
+          "name": "amount",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "cost",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "buyShield",
+      "inputs": [
+        {
+          "name": "amount",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "cost",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "cars",
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "contract Car"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "currentCar",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "contract Car"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "entropy",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint72",
+          "internalType": "uint72"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getAccelerateCost",
+      "inputs": [
+        {
+          "name": "amount",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "sum",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getActionsSold",
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint8",
+          "internalType": "enum CodePrix.ActionType"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getAllCarData",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "results",
+          "type": "tuple[]",
+          "internalType": "struct CodePrix.CarData[]",
+          "components": [
+            {
+              "name": "balance",
+              "type": "uint32",
+              "internalType": "uint32"
+            },
+            {
+              "name": "speed",
+              "type": "uint32",
+              "internalType": "uint32"
+            },
+            {
+              "name": "y",
+              "type": "uint32",
+              "internalType": "uint32"
+            },
+            {
+              "name": "shield",
+              "type": "uint32",
+              "internalType": "uint32"
+            },
+            {
+              "name": "car",
+              "type": "address",
+              "internalType": "contract Car"
+            }
+          ]
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getAllCarDataAndFindCar",
+      "inputs": [
+        {
+          "name": "carToFind",
+          "type": "address",
+          "internalType": "contract Car"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "results",
+          "type": "tuple[]",
+          "internalType": "struct CodePrix.CarData[]",
+          "components": [
+            {
+              "name": "balance",
+              "type": "uint32",
+              "internalType": "uint32"
+            },
+            {
+              "name": "speed",
+              "type": "uint32",
+              "internalType": "uint32"
+            },
+            {
+              "name": "y",
+              "type": "uint32",
+              "internalType": "uint32"
+            },
+            {
+              "name": "shield",
+              "type": "uint32",
+              "internalType": "uint32"
+            },
+            {
+              "name": "car",
+              "type": "address",
+              "internalType": "contract Car"
+            }
+          ]
+        },
+        {
+          "name": "foundCarIndex",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getCarData",
+      "inputs": [
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "contract Car"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "balance",
+          "type": "uint32",
+          "internalType": "uint32"
+        },
+        {
+          "name": "speed",
+          "type": "uint32",
+          "internalType": "uint32"
+        },
+        {
+          "name": "y",
+          "type": "uint32",
+          "internalType": "uint32"
+        },
+        {
+          "name": "shield",
+          "type": "uint32",
+          "internalType": "uint32"
+        },
+        {
+          "name": "car",
+          "type": "address",
+          "internalType": "contract Car"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getShellCost",
+      "inputs": [
+        {
+          "name": "amount",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "sum",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getShieldCost",
+      "inputs": [
+        {
+          "name": "amount",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "sum",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "play",
+      "inputs": [
+        {
+          "name": "turnsToPlay",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "register",
+      "inputs": [
+        {
+          "name": "car",
+          "type": "address",
+          "internalType": "contract Car"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "state",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8",
+          "internalType": "enum CodePrix.State"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "turns",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint16",
+          "internalType": "uint16"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "event",
+      "name": "Accelerated",
+      "inputs": [
+        {
+          "name": "turn",
+          "type": "uint256",
+          "indexed": true,
+          "internalType": "uint256"
+        },
+        {
+          "name": "car",
+          "type": "address",
+          "indexed": true,
+          "internalType": "contract Car"
+        },
+        {
+          "name": "amount",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        },
+        {
+          "name": "cost",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "RaceWon",
+      "inputs": [
+        {
+          "name": "turn",
+          "type": "uint256",
+          "indexed": true,
+          "internalType": "uint256"
+        },
+        {
+          "name": "winner",
+          "type": "address",
+          "indexed": true,
+          "internalType": "contract Car"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "Registered",
+      "inputs": [
+        {
+          "name": "turn",
+          "type": "uint256",
+          "indexed": true,
+          "internalType": "uint256"
+        },
+        {
+          "name": "car",
+          "type": "address",
+          "indexed": true,
+          "internalType": "contract Car"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "Shelled",
+      "inputs": [
+        {
+          "name": "turn",
+          "type": "uint256",
+          "indexed": true,
+          "internalType": "uint256"
+        },
+        {
+          "name": "attacker",
+          "type": "address",
+          "indexed": true,
+          "internalType": "contract Car"
+        },
+        {
+          "name": "target",
+          "type": "address",
+          "indexed": true,
+          "internalType": "contract Car"
+        },
+        {
+          "name": "amount",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        },
+        {
+          "name": "cost",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "Shielded",
+      "inputs": [
+        {
+          "name": "turn",
+          "type": "uint256",
+          "indexed": true,
+          "internalType": "uint256"
+        },
+        {
+          "name": "car",
+          "type": "address",
+          "indexed": true,
+          "internalType": "contract Car"
+        },
+        {
+          "name": "amount",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        },
+        {
+          "name": "cost",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "TurnCompleted",
+      "inputs": [
+        {
+          "name": "turn",
+          "type": "uint256",
+          "indexed": true,
+          "internalType": "uint256"
+        },
+        {
+          "name": "cars",
+          "type": "tuple[]",
+          "indexed": false,
+          "internalType": "struct CodePrix.CarData[]",
+          "components": [
+            {
+              "name": "balance",
+              "type": "uint32",
+              "internalType": "uint32"
+            },
+            {
+              "name": "speed",
+              "type": "uint32",
+              "internalType": "uint32"
+            },
+            {
+              "name": "y",
+              "type": "uint32",
+              "internalType": "uint32"
+            },
+            {
+              "name": "shield",
+              "type": "uint32",
+              "internalType": "uint32"
+            },
+            {
+              "name": "car",
+              "type": "address",
+              "internalType": "contract Car"
+            }
+          ]
+        },
+        {
+          "name": "acceleratePrice",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        },
+        {
+          "name": "shellPrice",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        },
+        {
+          "name": "shieldPrice",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "anonymous": false
+    }
+  ],
+  "bytecodeLength": 20156,
+  "extractedAt": "2025-10-30T14:27:17.000Z"
+}
